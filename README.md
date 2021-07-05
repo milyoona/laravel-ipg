@@ -9,6 +9,10 @@
 #### This is a Laravel Package for milyoona payment gateway.
 <p><img src="https://s19.picofile.com/file/8437672584/laravel_ipg.png?raw=true"></p>
 
+## Languages
+- [فارسی](https://github.com/milyoona/laravel-ipg/blob/main/README_PERSIAN.md)
+- [English](https://github.com/milyoona/laravel-ipg/blob/main/README.md)
+
 ## <g-emoji class="g-emoji" alias="arrow_down" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2b07.png">⬇️</g-emoji> How to install and config [milyoona/ipg](https://github.com/milyoona/ipg) package?
 
 #### Install package

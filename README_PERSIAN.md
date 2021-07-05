@@ -12,6 +12,11 @@
 #### این پکیج برای نصب بر روی پروژه‌های لاراول توسط تیم توسعه میلیونا تهیه شده است.
 <p><img src="https://s19.picofile.com/file/8437672584/laravel_ipg.png?raw=true"></p>
 
+## زبان‌های راهنمای استفاده
+- [فارسی](https://github.com/milyoona/laravel-ipg/blob/main/README_PERSIAN.md)
+- [English](https://github.com/milyoona/laravel-ipg/blob/main/README.md)
+
+
 ## <g-emoji class="g-emoji" alias="arrow_down" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2b07.png">⬇️</g-emoji> نحوه نصب و پیکربندی پکیج [درگاه میلیونا](https://github.com/milyoona/ipg)
 
 #### نحوه نصب پکیج
@@ -51,7 +56,7 @@ php artisan vendor:publish --tag=milyoona_ipg
         ->callbackUrl('مسیر تعین شده برای برگشت از درگاه')
         ->getToken(); // یا ->pay(); برای هدایت به درگاه بصورت مستقیم
             
-    // اگر در فایل تنظیمات مقادیر terminal_id و callback_url را درج نمایید نیازی به نوشتن آنها در درخواست‌ها نیست
+    // اگر در فایل تنظیمات مقادیر ترمینال و لینک بازگشت را درج نمایید نیازی به نوشتن آنها در درخواست‌ها نیست
     MilyoonaIpg::amount('PRICE_OF_PRODUCT')->getToken(); // یا ->pay(); برای هدایت به درگاه بصورت مستقیم
     ```
   <div dir="rtl">
@@ -94,7 +99,7 @@ php artisan vendor:publish --tag=milyoona_ipg
         ->token('توکن')
         ->verify(); // or ->trace();
         
-    // اگر در فایل تنظیمات مقدار terminal_id را درج کرده باشید نیازی به استفاده از متد آن نیست
+    // اگر در فایل تنظیمات مقدار ترمینال را درج کرده باشید نیازی به ارسال آن نیست
     MilyoonaIpg::token('توکن')
         ->verify(); // یا ->trace();
     ```
