@@ -6,7 +6,8 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/milyoona/laravel-ipg.svg?style=flat-square)](https://packagist.org/packages/milyoona/laravel-ipg)
 [![GitHub license](https://img.shields.io/github/license/milyoona/laravel-ipg?style=flat-square)](https://github.com/milyoona/laravel-ipg/blob/master/LICENSE)
 
-This is a Laravel Package for milyoona payment gateway.
+#### This is a Laravel Package for milyoona payment gateway.
+<p><img src="https://s19.picofile.com/file/8437672584/laravel_ipg.png?raw=true"></p>
 
 ## <g-emoji class="g-emoji" alias="arrow_down" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2b07.png">⬇️</g-emoji> How to install and config [milyoona/ipg](https://github.com/milyoona/ipg) package?
 
