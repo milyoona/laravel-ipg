@@ -28,56 +28,58 @@ php artisan vendor:publish --tag=milyoona_ipg
 
 ## <g-emoji class="g-emoji" alias="book" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4d6.png">📖</g-emoji> How to use exists methods and options
 
-#### Use <code>getToken()</code> and <code>pay()</code> methods of package
-```php
-<?php
-use Milyoona\Ipg\Facades\MilyoonaIpg;
-
-MilyoonaIpg::terminal('YOUR_TERMINAL_ID')
-    ->amount('AMOUNT_OF_PRODUCT')
-    ->callbackUrl('YOUR_CALLBACK_URL')
-    ->getToken(); // or ->pay(); for redirect to gateway page
-        
-// If you set the terminal_id and callback_url in config/milyoona_ipg.php you not need to fill this methods.
-MilyoonaIpg::amount('PRICE_OF_PRODUCT')->getToken(); // or ->pay(); for redirect to gateway page
-```
-###### List of extra option
-| Option  | description |
-| ------------- | ------------- |
-| mobile  | mobile number of customer  |
-| national_code  | national code of customer  |
-| order_id  | order id of product  |
-| card_no  | limit customer for pay with a specific card number|
-| description  | description of order  |
-
-###### How to use this options
-```php
-<?php
-use Milyoona\Ipg\Facades\MilyoonaIpg;
-
-MilyoonaIpg::terminal('YOUR_TERMINAL_ID')
-    ->amount('PRICE_OF_PRODUCT')
-    ->callbackUrl('YOUR_CALLBACK_URL')
-    ->option([
-        'mobile' => 'MOBILE',
-        'national_code' => 'NATIONAL_CODE',
-        'order_id' => 'ORDER_ID',
-        'card_no' => 'CARD_NUMBER',
-        'description' => 'YOUR_DESCRIPTION',
-    ])
-    ->getToken(); // or ->pay(); for redirect to gateway page
-```
-
-#### Use <code>verify()</code> and <code>trace()</code> methods of package
-```php
-<?php
-use Milyoona\Ipg\Facades\MilyoonaIpg;
-
-MilyoonaIpg::terminal('YOUR_TERMINAL_ID')
-    ->token('YOUR_TOKEN')
-    ->verify(); // or ->trace();
+- #### Use <code>getToken()</code> and <code>pay()</code> methods of package
+    ```php
+    <?php
+    use Milyoona\Ipg\Facades\MilyoonaIpg;
     
-// If you set the terminal_id in config/milyoona_ipg.php you not need to fill this method.
-MilyoonaIpg::token('YOUR_TOKEN')
-    ->verify(); // or ->trace();
-```
+    MilyoonaIpg::terminal('YOUR_TERMINAL_ID')
+        ->amount('AMOUNT_OF_PRODUCT')
+        ->callbackUrl('YOUR_CALLBACK_URL')
+        ->getToken(); // or ->pay(); for redirect to gateway page
+            
+    // If you set the terminal_id and callback_url in config/milyoona_ipg.php you not need to fill this methods.
+    MilyoonaIpg::amount('PRICE_OF_PRODUCT')->getToken(); // or ->pay(); for redirect to gateway page
+    ```
+    ###### List of extra option
+    | Option  | description |
+    | ------------- | ------------- |
+    | mobile  | mobile number of customer  |
+    | national_code  | national code of customer  |
+    | order_id  | order id of product  |
+    | card_no  | limit customer for pay with a specific card number|
+    | description  | description of order  |
+    
+    ###### How to use this options
+    ```php
+    <?php
+    use Milyoona\Ipg\Facades\MilyoonaIpg;
+    
+    MilyoonaIpg::terminal('YOUR_TERMINAL_ID')
+        ->amount('PRICE_OF_PRODUCT')
+        ->callbackUrl('YOUR_CALLBACK_URL')
+        ->option([
+            'mobile' => 'MOBILE',
+            'national_code' => 'NATIONAL_CODE',
+            'order_id' => 'ORDER_ID',
+            'card_no' => 'CARD_NUMBER',
+            'description' => 'YOUR_DESCRIPTION',
+        ])
+        ->getToken(); // or ->pay(); for redirect to gateway page
+    ```
+
+- #### Use <code>verify()</code> and <code>trace()</code> methods of package
+    ```php
+    <?php
+    use Milyoona\Ipg\Facades\MilyoonaIpg;
+    
+    MilyoonaIpg::terminal('YOUR_TERMINAL_ID')
+        ->token('YOUR_TOKEN')
+        ->verify(); // or ->trace();
+        
+    // If you set the terminal_id in config/milyoona_ipg.php you not need to fill this method.
+    MilyoonaIpg::token('YOUR_TOKEN')
+        ->verify(); // or ->trace();
+    ```
+  
+#### Built with :heart: for laravel developers.
