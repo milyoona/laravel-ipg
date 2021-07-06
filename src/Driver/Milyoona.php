@@ -37,13 +37,8 @@ class Milyoona extends Driver
                 $parameters = array_merge($parameters, ['description' => $option['description']]);
 
             $response = Http::post($this->getTokenUrl, $parameters);
-            if(isset($response['data'])) {
-                $response = $response['data'];
-                $response['url'] = $this->gateUrl . $response['token'];
-                return $response;
-            }
-            return $response;
 
+            return $response;
         } catch (\Exception $exception) {
             return response()->json(['message' => $exception->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
@@ -89,9 +84,7 @@ class Milyoona extends Driver
             ];
 
             $response = Http::post($this->verifyTokenUrl, $parameters);
-            if(isset($response['data'])) {
-                return $response['data'];
-            }
+
             return $response;
         } catch (\Exception $exception) {
             return response()->json(['message' => $exception->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
@@ -107,9 +100,7 @@ class Milyoona extends Driver
             ];
 
             $response = Http::post($this->traceTokenUrl, $parameters);
-            if(isset($response['data'])) {
-                return $response['data'];
-            }
+            
             return $response;
         } catch (\Exception $exception) {
             return response()->json(['message' => $exception->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
