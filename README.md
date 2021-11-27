@@ -19,6 +19,12 @@
 ```bash
 composer require milyoona/laravel-ipg
 ```
+
+#### For register in <code>Lumen</code> in <code>bootstrap/app.php</code>
+```php
+$app->register(Milyoona\Ipg\MilyoonaIpgServiceProvider::class);
+```
+
 #### Publish configs
 
 ```bash

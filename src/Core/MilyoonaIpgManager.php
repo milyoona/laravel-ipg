@@ -23,7 +23,7 @@ class MilyoonaIpgManager
 
     public function __construct(Milyoona $milyoona)
     {
-        $this->config = config('milyoona_ipg');
+        $this->config = lumen_config_path('milyoona_ipg');
         $this->driver = $milyoona;
     }
 

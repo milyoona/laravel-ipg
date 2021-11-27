@@ -31,7 +31,10 @@
     "autoload": {
         "psr-4": {
             "Milyoona\\Ipg\\": "src/"
-        }
+        },
+        "files": [
+            "src/helper/functions.php"
+        ]
     },
     "extra": {
         "laravel": {

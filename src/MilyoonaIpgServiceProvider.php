@@ -26,7 +26,7 @@ class MilyoonaIpgServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/config/milyoona_ipg.php' =>config_path('milyoona_ipg.php')
+            __DIR__.'/config/milyoona_ipg.php' => lumen_config_path('milyoona_ipg.php')
         ], 'milyoona_ipg');
     }
 }
