@@ -16,6 +16,11 @@ class MilyoonaIpgServiceProvider extends ServiceProvider
     public function register()
     {
         MilyoonaIpg::shouldProxyTo(MilyoonaIpgManager::class);
+
+        // For load config files
+        if (file_exists($this->app->basePath() . '/config/milyoona_ipg.php')) {
+            $this->mergeConfigFrom($this->app->basePath() . '/config/milyoona_ipg.php', 'milyoona_ipg');
+        }
     }
 
     /**

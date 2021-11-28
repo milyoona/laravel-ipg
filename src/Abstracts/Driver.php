@@ -15,10 +15,10 @@ abstract class Driver implements DriverInterface
     abstract public function trace($terminal, $token);
 
     public function defaultTerminal() {
-        return lumen_config_path('milyoona_ipg.default_terminal_id');
+        return config('milyoona_ipg.default_terminal_id');
     }
 
     public function defaultCallbackUrl() {
-        return lumen_config_path('milyoona_ipg.default_callback_url');
+        return config('milyoona_ipg.default_callback_url');
     }
 }
